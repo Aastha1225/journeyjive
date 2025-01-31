@@ -1,0 +1,74 @@
+.different {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:#D0B8A8;
+    background-position: center;
+    background-size: cover;
+    background-image: url();
+    background-size: 800px 800px;
+}
+
+.log-in {
+    width: 600px;
+    height: 600px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0.3);
+    background: white;
+    padding: 20px;
+    margin: 8% auto;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.log-in h1 {
+    color: #54175b;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.input-box {
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 90%;
+    border: 1px solid #999;
+    outline: none;
+    height: 50px;
+}
+
+.log-btn {
+    color: #fff;
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 60px;
+}
+
+.log-btn {
+    background-color: #85586F;          /* #c0a6c2 */
+}
+
+.log-btn:hover {
+    background-color: #47274a;
+    transition: 0.5s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logosss {
+    width: 70px;
+    margin-top: -50px;
+    border-radius: 35px;
+}
+
+.space {
+    margin-top: 50px;
+}
+

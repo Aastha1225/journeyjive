@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JourneyJive</title>
+    <link rel="stylesheet" href="my.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="comment.css">
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">
+            <div class="logo" id="logo-image">
+                <img src="photos/JOURNEY new.png" style="height: 60px; width: 60px; margin: 10px;" alt="logo">
+            </div>
+            JourneyJive
+        </label>
+        <ul>
+            <li><a class="active" href="#home">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-house-heart" viewBox="0 0 16 16">
+                        <path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.309 8 6.982" />
+                        <path
+                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.707L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.646a.5.5 0 0 0 .708-.707L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                    </svg>
+                </a></li>
+            <li><a href="#about">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-file-person-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2m-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11" />
+                    </svg>
+                </a></li>
+            <li><a href="#services">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
+                    </svg>
+                </a></li>
+            <li><a href="#comment">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chat-heart-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9 9 0 0 0 8 15m0-9.007c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+                    </svg>
+                </a></li>
+            <li><a href="#contact">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                    </svg>
+                </a></li>
+            <li><a href="login.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+                        <path fill-rule="evenodd"
+                            d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                    </svg>
+                </a></li>
+            <li><a href="signup.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-door-open-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15zM11 2h.5a.5.5 0 0 1 .5.5V15h-1zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1" />
+                    </svg>
+                </a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="video1">
+            <video class="travel" autoplay="autoplay" loop="loop">
+                <source src="photos/Travel.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="section__container" id="home">
+            <div class="header__content">
+
+                <h1
+                    style="font-family: rubik 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    JourneyJive</h1>
+                <p>
+                    Embark on a journey of a lifetime and explore the world's most
+                    breathtaking destinations with our expert travel advice. From exotic
+                    beaches to cultural wonders, we've got you covered with our
+                    comprehensive travel guides and insider tips.
+                </p>
+                <button> <a href="#about">Read more</a> </button>
+                <!-- </div> -->
+            </div>
+    </header>
+
+    <section class="about_container" id="about">
+        <div>
+            <h1 class="section__title" style="color: #5681a7;">About Us</h1>
+        </div>
+
+        <div>
+            <p style="text-align: center;">At JourneyJive, we believe that travel is more than just visiting new
+                places; it's about creating
+                lifelong
+                memories, forging meaningful connections, and embracing the beauty of our diverse world.
+
+
+            </p>
+            <p style="text-align: center;">
+                <b class="section__subtitle" style="color: #5681a7;">Our Story - </b>
+                Founded with a passion for exploration and a commitment to exceptional service,<br>
+                JourneyJive is your trusted partner in crafting unforgettable travel experiences.<br>
+                Whether you're a seasoned globetrotter or embarking on your first adventure, our mission is to
+                inspire,<br> empower, and guide you every step of the way.
+            </p>
+        </div>
+    </section>
+
+    <section class="cards_container" id="services">
+
+        <div class="main-cards">
+            <!-- Cabs -->
+            <div class="cards" id="cab">
+                <div class="cards-image">
+                    <img src="photos/Cabs.png">
+
+                </div>
+                <div class="title">
+                    <h2>CABS</h2>
+
+                    <p>Book your cabs here</p>
+                </div>
+                <div class="des">
+                    <button>
+                        <a href="photos/Group 1.png">
+                            Click Here
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Nearby Places -->
+            <div class="cards" id="nplace">
+                <div class="cards-image">
+                    <img src="photos/Nearby Places.png">
+
+                </div>
+                <div class="title">
+                    <h2>Nearby Places</h2>
+
+                    <p>Visit nearby places</p>
+                </div>
+                <div class="des">
+
+                    <button>
+                        <a href="photos/">
+                            Click Here
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="cards" id="todolist">
+                <div class="cards-image">
+                    <img src="photos/to do list.png">
+
+                </div>
+                <div class="title">
+                    <h2>TODO List</h2>
+
+                    <p>List your tasks here</p>
+                </div>
+                <div class="des">
+
+                    <button>
+                        <a href="todo.html">
+                            Click Here
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+
+
+            <div class="cards" id="moneysplit">
+                <div class="cards-image">
+                    <img src="photos/Money split.png">
+
+                </div>
+                <div class="title">
+                    <h2>Money Split</h2>
+
+                    <p>Split money with the friends</p>
+                </div>
+                <div class="des">
+
+                    <button>
+                        <a href="billsplit.html">
+                            Click Here
+                        </a>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div>
+    </section>
+
+    <section class="journey__container">
+        <div class="section__container">
+            <h2 class="section__title">Start Your Journey</h2>
+            <p class="section__subtitle">The most searched places in March</p>
+            <div class="journey__grid">
+                <div class="country__card">
+                    <img src="photos/Bir Billing.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Bir Billing, Himachal Pradesh</span>
+                    </div>
+                </div>
+                <div class="country__card">
+                    <img src="photos/Andaman and Nicobar Islands.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Andaman and Nicobar Islands</span>
+                    </div>
+                </div>
+                <div class="country__card">
+                    <img src="photos/Backwaters of Kerela.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Backwaters of Kerela</span>
+                    </div>
+                </div>
+                <div class="country__card">
+                    <img src="photos/Ghats Varanasi.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Ghats, Vranasi</span>
+                    </div>
+                </div>
+                <div class="country__card">
+                    <img src="photos/Goa.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Goa, India</span>
+                    </div>
+                </div>
+                <div class="country__card">
+                    <img src="photos/Hawa Mahal Jaipur.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Hawa Mahal, Rajasthan</span>
+                    </div>
+                </div>
+                <div class="country__card">
+                    <img src="photos/Kasol.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Kasol, Himachal Pradesh</span>
+                    </div>
+                </div>
+                <div class="country__card">
+                    <img src="photos/Ladakh.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Ladakh, India</span>
+                    </div>
+                </div>
+                <div class="country__card">
+                    <img src="photos/Loktak Manipur.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Loktak Lake, Manipur</span>
+                    </div>
+                </div>
+                <div class="country__card">
+                    <img src="photos/Tea Garden Assam.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Tea Garden, Assam</span>
+                    </div>
+                </div>
+                <div class="country__card">
+                    <img src="photos/Thar Desert.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Thar Desert, Rajasthan</span>
+                    </div>
+                </div>
+                <div class="country__card">
+                    <img src="photos/Tsongmo Sikkim.jpg" alt="country" />
+                    <div class="country__name">
+                        <i class="ri-map-pin-2-fill"></i>
+                        <span>Tsongmo Lake, Sikkim</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner__container">
+        <div class="section__container">
+            <div class="banner__content">
+                <h2>Discount 10-30% Off</h2>
+                <p>
+                    Travel the world on a budget with our unbeatable discounted travel
+                    deals. Whether you're looking for a last-minute escape or planning
+                    ahead, we've got you covered with incredible discounts on flights,
+                    hotels, and packages. Don't wait, book now and experience the
+                    adventure of a lifetime without breaking the bank.
+                </p>
+                <button>See Tours</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="display__container">
+        <div class="section__container">
+            <h2 class="section__title">Why Choose Us</h2>
+            <p class="section__subtitle">
+                The gladdest moment in human life, is a departure into unknown lands.
+            </p>
+            <div class="display__grid">
+                <div class="display__card grid-1">
+                    <img src="photos/Food and Drink.jpg" alt="grid" />
+                </div>
+                <div class="display__card">
+                    <i class="ri-earth-line"></i>
+                    <h4>Passionate Travel</h4>
+                    <p>Fuel your passion for adventure and discover new horizons</p>
+                </div>
+                <div class="display__card">
+                    <img src="photos/beach side.jpg" alt="grid" />
+                </div>
+                <div class="display__card">
+                    <img src="photos/trekking.jpeg" alt="grid" />
+                </div>
+                <div class="display__card">
+                    <i class="ri-road-map-line"></i>
+                    <h4>Beautiful Places</h4>
+                    <p>Uncover the world's most breathtakingly beautiful places</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ok" id="comment">
+        <h2>Feedback</h2>
+        <template class="reply-input-template">
+            <div class="reply-input container">
+                <img src="photos/images/avatars/image-amyrobson.webp" alt="" class="usr-img">
+                <textarea class="cmnt-input" placeholder="Add a comment..."></textarea>
+                <button class="bu-primary">SEND</button>
+            </div>
+        </template>
+
+        <template class="comment-template">
+            <div class="comment-wrp">
+                <div class="comment container">
+                    <div class="c-score">
+                        <img src="photos/images/icon-plus.svg" alt="plus" class="score-control score-plus">
+                        <p class="score-number">5</p>
+                        <img src="photos/images/icon-minus.svg" alt="minus" class="score-control score-minus">
+                    </div>
+                    <div class="c-controls">
+                        <a class="delete"><img src="photos/images/icon-delete.svg" alt=""
+                                class="control-icon">Delete</a>
+                        <a class="edit"><img src="photos/images/icon-edit.svg" alt="" class="control-icon">Edit</a>
+                        <a class="reply"><img src="photos/images/icon-reply.svg" alt="" class="control-icon">Reply</a>
+                    </div>
+                    <div class="c-user">
+                        <img src="photos/images/avatars/image-maxblagun.png" alt="" class="usr-img">
+                        <p class="usr-name">maxblagun</p>
+                        <p class="cmnt-at">2 weeks ago</p>
+                    </div>
+                    <p class="c-text">
+                        <span class="reply-to"></span>
+                        <span class="c-body"></span>
+                    </p>
+                </div><!--comment-->
+                <div class="replies comments-wrp">
+                </div><!--replies-->
+            </div>
+        </template>
+        <main>
+            <div class="comment-section">
+
+                <div class="comments-wrp">
+
+                </div> <!--commentS wrapper-->
+                <div class="reply-input container">
+                    <img src="photos/images/avatars/image-juliusomo.webp" alt="" class="usr-img">
+                    <textarea class="cmnt-input" placeholder="Add a comment..."></textarea>
+                    <button class="bu-primary">SEND</button>
+                </div> <!--reply input-->
+            </div> <!--comment sectio-->
+
+            <div class="modal-wrp invisible">
+                <div class="modal container">
+                    <h3>Delete comment</h3>
+                    <p>Are you sure you want to delete this comment? This will remove the comment and can't be undone
+                    </p>
+                    <button class="yes">YES,DELETE</button>
+                    <button class="no">NO,CANCEL</button>
+                </div>
+            </div>
+        </main>
+        <script src="comment.js"></script>
+    </section>
+
+    <footer>
+        <div class="section__container" id="contact">
+            <h4>JourneyJive.co</h4>
+            <p>
+                Like all great travellers, I have seen more than I remember and remember more than I have seen.
+                <!-- Let your dreams be your wings. -->
+            </p>
+        </div>
+
+        <section class="contact" id="contact" style="background-color: #282d31;">
+            <div class="container" style="background-color: #282d31; box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);">
+                <div class="content">
+                    <div class="box form wow slideInLeft">
+                        <form>
+                            <input type="text" placeholder="Enter Name" required="">
+                            <input type="text" placeholder="Enter Email" required="">
+                            <input type="text" placeholder="Enter Mobile" required="">
+                            <textarea placeholder="Enter Message" required=""></textarea>
+                            <button type="submit" onclick="a()">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="box text wow slideInRight">
+                        <h2>Get Connected with Us</h2>
+                        <p class="title-p">Please Provide you valid whatsapp number</p>
+                        <div class="info">
+                            <ul>
+                                <li><span class="fa fa-map-marker"></span> DSW, 13th Block 501 </li>
+                                <li><span class="fa fa-phone"></span> 9592646784</li>
+                                <li><span class="fa fa-envelope"></span> journeyJive1224@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="social">
+                            <a href=""><span class="fa fa-facebook">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-telegram" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
+                                    </svg>
+                                </span></a>
+                            <a href=""><span class="fa fa-linkedin">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                    </svg>
+                                </span></a>
+                            <a href=""><span class="fa fa-youtube-play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                    </svg>
+                                </span></a>
+                            <a href=""><span class="fa fa-skype">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                        <path
+                                            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                                    </svg>
+                                </span></a>
+                            <a href=""><span class="fa fa-youtube-play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-twitter" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                                    </svg>
+
+                                </span></a>
+                        </div>
+
+                        <div class="copy">
+                            <!-- PowerBy © sevn. media -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="https://unpkg.c "></script>
+
+    <script src="todo.js"></script>
+
+    <script src="billsplit.js"></script>
+
+    <script src="comment.js"></script>
+
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
